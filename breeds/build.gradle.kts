@@ -13,6 +13,8 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+    macosX64()
+    macosArm64()
 
     sourceSets {
         commonMain.dependencies {
@@ -28,7 +30,7 @@ kotlin {
             implementation(libs.sqlDelight.android)
             implementation(libs.ktor.client.okHttp)
         }
-        iosMain.dependencies {
+        appleMain.dependencies {
             implementation(libs.touchlab.stately.common)
             implementation(libs.sqlDelight.native)
             implementation(libs.ktor.client.ios)
